@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check progress</title>
+    <link href="/styles/main.css" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div><h1>Sports App</h1>
+        <img class="inline" src="/pictures/logo.jpeg" alt="logo" height="90px" width="auto"/>
+    </div>
+    <nav class="main-menu">
+        <div class="inline"><a href="/">Home</a></div>
+
+        <div class="inline"><a href="/myProfile">My profile</a></div>
+    </nav>
+
+
+
+</header>
+<table>
+    <tr>
+        <th>Weight</th>
+        <th>Date</th>
+    </tr>
+
+
+
+
+    <tr th:each="weight: ${weights}">
+        <td th:text="${weight.weight}" />
+        <td th:text="${weight.date}"></td>
+
+
+    </tr>
+
+</table>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+h1{
+    color: #11b4d2;
+}
+h2{
+    color: #4b3b93;
+}
+
+button{
+    padding: 6px;
+    border-radius: 4px;
+    background: dimgray;
+    color: black;
+    border: 0;
+    width: 200px;
+}
+input{
+    border: none;
+    border-bottom: 2px solid blueviolet;
+    width: 40%;
+    padding: 6px;
+    margin: 2px;
+}
+
+.inline{
+    display: inline-block;
+
+}
+
+header{
+    text-align: center;
+    vertical-align: middle;
+}
+.main-menu > a{
+    text-decoration: none;
+    color: blueviolet;
+    background: none;
+    border-bottom: 2px cornflowerblue;
+    padding: 4px;
+    margin: 2px;
+}
+main{
+    margin-left: 20%;
+    margin-top: 100px;
+}
+.logo-title-area>img{
+    width: 60px;
+    height: auto;
+    border-radius: 50%;
+}
+body{
+    text-align: center;
+    vertical-align: middle;
+
+}

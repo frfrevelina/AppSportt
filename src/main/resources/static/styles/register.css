@@ -1,0 +1,23 @@
+
+form{
+    width: 400px;
+
+}
+form > div {
+    margin: 4px;
+    padding: 6px;
+
+}
+form > div > label, form > div >input{
+    display: block;
+}
+button{
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+}
+.logo-title-area>img{
+    width: 60px;
+    height: auto;
+    border-radius: 50%;
+}

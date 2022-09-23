@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>My Profile</title>
+    <link href="/styles/main.css" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div><h1 class="inline">Sports App</h1>
+        <h2> <img class="inline" src="/pictures/logo.jpeg" alt="logo" height="90px" width="auto"/></h2>
+    </div>
+    <nav class="main-menu">
+        <div class="inline"><a href="/">Home</a></div>
+        <div class="inline"><a href="/login">Change user</a></div>
+
+
+        <h2>My profile</h2>
+
+
+    </nav>
+</header>
+<div>Hello, <span th:text="${user.getUsername()}"!></span>
+
+
+
+
+  <div> Username:     <span  th:text="${user.getUsername()}"></span></div>
+    <div>Name:     <span th:text="${user.getName()}"></span></div>
+   <div>Lastname:     <span th:text="${user.getLastname()}"></span></div>
+    <div>Gender:    <span th:text="${user.getGender()}"></span></div>
+    <div>Age:    <span th:text="${user.getAge()}"></span></div>
+    <div>Start weight: <span th:text="${user.getWeight()}"></span></div>
+    <br>
+
+
+
+    <form method="post" action="/saveWeight">
+        <input hidden th:value="${user.getId()}" name="userId"/>
+    <div>
+        <label>Enter your weight in kg</label>
+        <input name="weight" required>
+    </div>
+    <div>
+        <label>Enter date</label>
+        <input name="date" required type="date">
+    </div>
+    <div>
+        <button>Submit</button>
+    </div>
+    </form>
+
+
+
+    <div class="inline"><h4><a href="/progress">Click here to check your progress</a></h4></div><br>
+    <div class="inline"><h4><a href="/aim">Click here to choose your training for today</a></h4></div><br>
+    <div class="inline"><h4><a href="/seeMyProgramm">Click here to see your program</a></h4></div><br>
+
+
+
+
+</div>
+</body>
+</html>

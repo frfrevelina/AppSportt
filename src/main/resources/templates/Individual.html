@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stretching individual</title>
+    <link href="/styles/main.css" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div><h1>Sports App</h1>
+        <img alt="logo" class="inline"  src="/pictures/logo.jpeg" height="90px" width="auto"/>
+    </div>
+    <nav class="main-menu">
+        <div class="inline"><a href="/">Home</a></div>
+
+        <div class="inline"><a href="/myProfile">My profile</a></div>
+    </nav>
+    <h1>All exercises</h1>
+</header>
+<div>
+    <table>
+        <tr>
+            <th>Exercise name</th>
+            <th>Repetitions</th>
+            <th>Type</th>
+
+        </tr>
+        <tr th:each="exercise: ${exercises}">
+            <td th:text="${exercise.title}" />
+            <td th:text="${exercise.repetitions}"></td>
+            <td th:text="${exercise.type}" />
+
+        </tr>
+    </table>
+
+    <h1>All exercises</h1>
+    <form method="post" action="/addIndividualExercises">
+        <div th:each="exercise: ${allExercises}">
+            <input type="checkbox" th:id="${exercise.id}" name="exerciseId" th:value="${exercise.id}">
+            <input type="hidden" name="userId" th:value="${userId}"/>
+            <div th:text="${exercise.title}" ></div>
+            <div th:text="${exercise.repetitions}"></div>
+            <div th:text="${exercise.type}" /></div>
+            <br/>
+        <div/>
+
+        <button>Submit</button>
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

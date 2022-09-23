@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check my program</title>
+  <link href="/styles/main.css" rel="stylesheet">
+</head>
+
+<body>
+<header>
+  <div><h1>Sports App</h1>
+    <img class="inline" src="/pictures/logo.jpeg" alt="logo" height="90px" width="auto"/>
+  </div>
+  <nav class="main-menu">
+    <div class="inline"><a href="/">Home</a></div>
+
+    <div class="inline"><a href="/myProfile">My profile</a></div>
+  </nav>
+
+
+</header>
+
+
+
+<table>
+  <tr>
+    <th>Exercise name</th>
+    <th>Repetitions</th>
+    <th>Type</th>
+
+  </tr>
+  <tr th:each="exercise: ${exercises}">
+    <td th:text="${exercise.title}" />
+    <td th:text="${exercise.repetitions}"></td>
+    <td th:text="${exercise.type}" />
+
+  </tr>
+</table>
+
+
+</div>
+</body>
+</html>

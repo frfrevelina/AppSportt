@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>register</title>
+    <link href="/styles/main.css" rel="stylesheet">
+
+</head>
+<body>
+<header>
+   <div><h1>Sports App</h1>
+       <img class="inline" src="/pictures/logo.jpeg" alt="logo" height="90px" width="auto"/>
+   </div>
+
+    <nav class="main menu">
+
+    <div class="inline"><a href="/">Home</a></div>
+    <div class="inline"><a href="/register">Create an account</a></div>
+    <div class="inline"><a href="/login">LogIn</a></div>
+
+    </nav>
+    <link href="/styles/main.css" rel="stylesheet">
+</header>
+<main>
+    <h3>Create an account</h3>
+</main>
+
+<form method="post" action="/register">
+    <div>
+        <label>Enter your username</label>
+        <input name="username" required>
+
+
+    </div>
+    <div>
+        <label>Enter password</label>
+        <input name="password" type="password" required>
+    </div>
+    <div>
+        <label>Enter first name</label>
+        <input name="name" required >
+
+    </div>
+    <div>
+        <label>Enter last name</label>
+        <input name="lastname">
+    </div>
+    <div>
+        <label>Your gender</label>
+        <input name="gender" type="text">
+    </div>
+    <div>
+        <label>Enter your age</label>
+        <input name="age" type="number">
+    </div>
+    <div>
+        <label>Enter your weight in kg</label>
+        <input name="weight" required>
+    </div>
+
+
+
+
+    <div>
+       <button>Create an account</button>
+    </div>
+</form>
+
+</body>
+</html>

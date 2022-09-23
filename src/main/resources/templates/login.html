@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <link href="/styles/main.css" rel="stylesheet">
+    <link href="/styles/login.css" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div><h1 class="inline">Sports App</h1>
+       <h2> <img class="inline" src="/pictures/logo.jpeg" alt="logo" height="90px" width="auto"/></h2>
+    </div>
+    <nav class="main-menu">
+        <div class="inline"><a href="/">Home</a></div>
+        <div class="inline"><a href="/register">Create an account</a></div>
+
+
+    </nav>
+    <link href="/styles/login.css" rel="stylesheet">
+</header>
+
+<main>
+    <h3>Sign In</h3>
+    <form method="post" action="/login">
+        <div>
+            <label>Enter your Username</label>
+            <label>
+                <input name="username" type="text" required minlength="4">
+            </label>
+        </div>
+        <div>
+
+            <label>Enter your password</label>
+            <label>
+                <input name="password" type="password" required minlength="4">
+            </label>
+        </div>
+        <div>
+            <button>Login to your account</button>
+        </div>
+        <div>
+            <p th:if="${status == 'login_failed'}" style="color: red; background: #facccc">
+                <span th:text="${message}"></span>
+            </p>
+            <p th:if="${status == 'signup_success'}" style="color: green; background: #c2e3c2">
+                Registration successful. Please enter your details to login
+            </p>
+        </div>
+    </form>
+
+
+</main>
+
+</body>
+</html>
